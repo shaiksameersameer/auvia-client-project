@@ -675,7 +675,10 @@ export const Home = () => {
       </section>
 
       {/* Interest Form Section */}
-      <section className="py-16 md:py-32 bg-brand-lavender/30">
+      <section 
+         id="interest-form"
+          className="py-16 md:py-32 bg-brand-lavender/30"
+      >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
