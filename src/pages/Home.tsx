@@ -280,7 +280,7 @@ export const Home = () => {
       {/* Insurance Trust Bar */}
       <section className="py-16 bg-[#FCFAF7] border-y border-brand-teal/5">
         <div className="max-w-7xl mx-auto px-6 overflow-hidden">
-          <p className="text-center text-label-custom tracking-[0.3em] mb-10">Trusted & Accepted By</p>
+          <p className="text-center text-label-custom text-brand-sage uppercase tracking-[0.3em] mb-10">Trusted & Accepted By</p>
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -289,17 +289,66 @@ export const Home = () => {
             className="flex flex-wrap justify-center items-center gap-6 md:gap-12 lg:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-700"
           >
             {['BCBS TX', 'Aetna', 'Cigna', 'United Healthcare', 'Wellpoint'].map(p => (
-              <motion.span key={p} variants={itemVariants} className="text-xl md:text-3xl font-kids font-bold text-brand-ink tracking-tighter hover:text-brand-teal transition-colors cursor-pointer">{p}</motion.span>
+              <motion.span key={p} variants={itemVariants} className="text-small-heading font-kids font-bold text-brand-ink tracking-tight hover:text-brand-teal transition-colors cursor-pointer">{p}</motion.span>
             ))}
             <Link to="/insurance-by-state">
-              <motion.span variants={itemVariants} className="text-brand-teal font-bold text-lg hover:underline">+ All Accepted</motion.span>
+              <motion.span variants={itemVariants} className="text-brand-teal font-bold text-body-normal-normal hover:underline">+ All Accepted</motion.span>
             </Link>
           </motion.div>
         </div>
       </section>
+      {/* Clinical Excellence Section */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+    
+    <div className="text-center mb-16">
+      <h2 className="text-section font-kids font-bold text-brand-ink mb-6">
+        Clinical Excellence You Can Trust
+      </h2>
+
+      <p className="text-body-main text-brand-sage max-w-3xl mx-auto">
+        Our compassionate care team is dedicated to helping every child grow with confidence through evidence-based ABA therapy and family-centered support.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      
+      <div className="bg-[#FCFAF7] p-10 rounded-[32px] border border-brand-teal/10 text-center shadow-sm">
+        <h3 className="text-5xl font-bold text-brand-teal mb-4">50+</h3>
+        <p className="text-small-heading font-bold text-brand-ink mb-2">
+          Certified BCBAs
+        </p>
+        <p className="text-small text-brand-sage">
+          Experienced clinical leaders focused on personalized care plans.
+        </p>
+      </div>
+
+      <div className="bg-[#FCFAF7] p-10 rounded-[32px] border border-brand-teal/10 text-center shadow-sm">
+        <h3 className="text-5xl font-bold text-brand-teal mb-4">100+</h3>
+        <p className="text-small-heading font-bold text-brand-ink mb-2">
+          Registered RBTs
+        </p>
+        <p className="text-small text-brand-sage">
+          Dedicated therapy professionals supporting daily progress and growth.
+        </p>
+      </div>
+
+      <div className="bg-[#FCFAF7] p-10 rounded-[32px] border border-brand-teal/10 text-center shadow-sm">
+        <h3 className="text-5xl font-bold text-brand-teal mb-4">500+</h3>
+        <p className="text-small-heading font-bold text-brand-ink mb-2">
+          Families Supported
+        </p>
+        <p className="text-small text-brand-sage">
+          Helping children and families build meaningful milestones together.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Service Blocks */}
-      <section id="services" className="py-32 bg-white relative">
+      <section id="services" className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -307,8 +356,8 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-20"
           >
-            <h2 className="text-section mb-6">Reach grow with confidence moments. <span className="text-brand-teal italic font-medium"></span></h2>
-            <p className="text-brand-sage text-body-normal leading-relaxed"> Expert ABA therapy programs designed specifically for every stage of your child's development.</p>
+            <h2 className="text-section font-kids font-bold text-brand-ink mb-6">Reach grow with confidence <span className="text-brand-teal italic">moments.</span></h2>
+            <p className="text-body-normal-normal-main text-brand-sage">Expert ABA therapy programs designed specifically for every stage of your child's development.</p>
           </motion.div>
 
           <motion.div
@@ -320,7 +369,7 @@ export const Home = () => {
           >
             {[
               { title: "Center-based Therapy", age: "18 months - 10 years", color: "bg-brand-mint", icon: <Smile />, href: "/services" },
-              { title: "Auvia at Home", age: "18 months - 14 years", color: "bg-brand-lavender", icon: <Heart />, href: "/services" }
+              { title: "In-home Based Therapy", age: "18 months - 14 years", color: "bg-brand-lavender", icon: <Heart />, href: "/services" }
             ].map((card, i) => (
               <motion.div
                 key={i}
@@ -335,9 +384,9 @@ export const Home = () => {
                 >
                   {React.cloneElement(card.icon, { size: 32 })}
                 </motion.div>
-                <h3 className="text-small-heading mb-3">{card.title}</h3>
-                <p className="text-brand-teal font-bold text-sm mb-6 uppercase tracking-wider">{card.age}</p>
-                <p className="text-brand-sage font-medium mb-10 leading-relaxed">Targeting social communication, self-care, and meaningful play through evidence-based practices.</p>
+                <h3 className="text-h3 font-kids font-bold mb-3">{card.title}</h3>
+                <p className="text-brand-teal font-bold text-label-custom mb-6 uppercase tracking-wider">{card.age}</p>
+                <p className="text-brand-sage font-medium text-body-normal-normal mb-10">Targeting social communication, self-care, and meaningful play through evidence-based practices.</p>
                 <span className="flex items-center gap-2 font-kids font-bold text-brand-teal group-hover:gap-4 transition-all">
                   Learn more <ArrowRight size={20} />
                 </span>
@@ -362,7 +411,7 @@ export const Home = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-section mb-10 md:mb-16 leading-tight"
+            className="text-section font-kids font-bold mb-10 md:mb-16 tracking-tight"
           >
             Evidence-based ABA therapy <br /> that works for your family.
           </motion.h2>
@@ -375,25 +424,25 @@ export const Home = () => {
             className="grid md:grid-cols-2 gap-6 md:gap-8"
           >
             <motion.div variants={itemVariants} className="bg-white/10 backdrop-blur-xl p-8 md:p-12 rounded-[32px] md:rounded-[50px] border border-white/20 text-left hover:bg-white/15 transition-all group cursor-pointer">
-              <h3 className="text-xl md:text-3xl font-kids font-bold mb-4 md:mb-5 group-hover:text-brand-peach transition-colors">My child does not have an autism diagnosis.</h3>
-              <p className="text-white/80 text-base md:text-lg mb-6 md:mb-10">We will help to connect you to resources to get your child evaluated and get a diagnosis report.</p>
-              <button
-              onClick={() => navigate('/what-is-autism')} 
-              className="w-full bg-white text-brand-teal py-4 md:py-5 rounded-2xl font-bold text-lg md:text-xl hover:bg-brand-peach hover:text-white transition-all transform active:scale-95 shadow-lg"
-            >
-              Get diagnostic resources
-            </button>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="bg-white text-brand-ink p-8 md:p-12 rounded-[32px] md:rounded-[50px] text-left shadow-2xl group cursor-pointer hover:-translate-y-2 transition-transform">
-              <h3 className="text-xl md:text-3xl font-kids font-bold mb-4 md:mb-5 text-brand-teal">My child has an autism diagnosis.</h3>
-              <p className="text-brand-sage text-base md:text-lg mb-6 md:mb-10">Start your journey today. We handle the insurance paperwork so you can focus on your child.</p>
-              <button
-                onClick={() => navigate('/contact')}
-                className="w-full bg-brand-teal text-white py-4 md:py-5 rounded-2xl font-bold text-lg md:text-xl hover:bg-[#3d7a6f] transition-all transform active:scale-95 shadow-lg"
+                <h3 className="text-small-heading font-kids font-bold mb-4 md:mb-5 group-hover:text-brand-peach transition-colors">My child does not have an autism diagnosis.</h3>
+                <p className="text-white/80 text-body-normal-normal mb-6 md:mb-10">We will help to connect you to resources to get your child evaluated and get a diagnosis report.</p>
+                <button
+                onClick={() => navigate('/what-is-autism')} 
+                className="w-full bg-white text-brand-teal py-4 md:py-5 rounded-2xl font-bold text-body-normal-normal hover:bg-brand-peach hover:text-white transition-all transform active:scale-95 shadow-lg"
               >
-                Get started
+                Get diagnostic resources
               </button>
+              </motion.div>
+
+              <motion.div variants={itemVariants} className="bg-white text-brand-ink p-8 md:p-12 rounded-[32px] md:rounded-[50px] text-left shadow-2xl group cursor-pointer hover:-translate-y-2 transition-transform">
+                <h3 className="text-small-heading font-kids font-bold mb-4 md:mb-5 text-brand-teal">My child has an autism diagnosis.</h3>
+                <p className="text-brand-sage text-body-normal-normal mb-6 md:mb-10">Start your journey today. We handle the insurance paperwork so you can focus on your child.</p>
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="w-full bg-brand-ink text-white py-4 md:py-5 rounded-2xl font-bold text-body-normal-normal hover:bg-slate-700 transition-all transform active:scale-95 shadow-lg"
+                >
+                  Connect With Us
+                </button>
             </motion.div>
           </motion.div>
         </div>
@@ -402,7 +451,7 @@ export const Home = () => {
       {/* Developmental Timeline */}
       <section className="py-16 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-5xl font-kids font-bold mb-12 sm:mb-20 tracking-tight">Celebrate Your <span className="text-brand-teal italic underline decoration-brand-peach underline-offset-[12px]">Big Moments.</span></h2>
+          <h2 className="text-section font-kids font-bold mb-12 sm:mb-20 tracking-tight">Celebrate Your <span className="text-brand-teal italic underline decoration-brand-peach underline-offset-[12px]">Big Moments.</span></h2>
           <DevelopmentalTimeline />
         </div>
       </section>
@@ -416,8 +465,8 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl font-kids font-bold text-brand-ink mb-6">Why families choose <span className="text-brand-teal">Auvia</span></h2>
-            <p className="text-brand-sage text-xl max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-section font-kids font-bold text-brand-ink mb-6">Why families choose <span className="text-brand-teal">Auvia</span></h2>
+            <p className="text-body-normal-normal-main text-brand-sage max-w-3xl mx-auto">
               We believe families deserve clear, trustworthy information about how ABA therapy can make a meaningful difference in their children's lives.
             </p>
           </motion.div>
@@ -438,19 +487,19 @@ export const Home = () => {
               whileHover={{ scale: 1.08, rotate: -1 }}
               className="p-8 rounded-[40px] bg-white border-2 border-brand-teal shadow-[0_30px_60px_rgba(77,150,137,0.2)] relative z-10"
             >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-teal text-white px-4 py-1 rounded-full  text-label-custom  uppercase tracking-widest">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-teal text-white px-4 py-1 rounded-full text-label-custom uppercase tracking-widest">
                 Fastest Start
               </div>
               <div className="w-14 h-14 bg-brand-mint/30 rounded-2xl flex items-center justify-center text-brand-teal mb-6">
                 <Zap size={28} fill="currentColor" />
               </div>
-           <h3 className="text-small-heading mb-4">Immediate access to care</h3>
-              <p className="text-brand-sage mb-6 font-medium">
+              <h3 className="text-small-heading font-kids font-bold mb-4">Immediate access to care</h3>
+              <p className="text-brand-sage mb-6 font-medium text-body-normal-normal-sm">
                 Early intervention makes all the difference. With conveniently located autism therapy centers near you, your child can start ABA therapy right away.
               </p>
               <button
                 onClick={() => navigate('/locations')}
-                className="bg-brand-teal text-white w-full py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#3d7a6f] transition-colors"
+                className="bg-brand-teal text-white w-full py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#3d7a6f] transition-colors text-body-normal-normal-sm"
               >
                 Find an ABA center <ArrowRight size={18} />
               </button>
@@ -460,49 +509,49 @@ export const Home = () => {
               <div className="w-14 h-14 bg-brand-peach/30 rounded-2xl flex items-center justify-center text-brand-teal mb-6">
                 <ShieldCheck size={28} />
               </div>
-              <h3 className="text-small-heading mb-4">Diagnostic support</h3>
-              <p className="text-brand-sage mb-6">You don't have to wait for answers. If your child has many of the early signs of autism, we can help them get evaluated.</p>
-              <button onClick={() => navigate('/services')} className="text-brand-teal font-bold flex items-center gap-2 hover:underline">Screen for autism <ArrowRight size={18} /></button>
+              <h3 className="text-small-heading font-kids font-bold mb-4">Diagnostic support</h3>
+              <p className="text-brand-sage mb-6 text-body-normal-normal-sm">You don't have to wait for answers. If your child has many of the early signs of autism, we can help them get evaluated.</p>
+              <button onClick={() => navigate('/services')} className="text-brand-teal font-bold flex items-center gap-2 hover:underline text-body-normal-normal-sm">Screen for autism <ArrowRight size={18} /></button>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-8 rounded-[40px] bg-[#FCFAF7] border border-brand-teal/5">
               <div className="w-14 h-14 bg-brand-lavender/30 rounded-2xl flex items-center justify-center text-brand-teal mb-6">
                 <FileText size={28} />
               </div>
-              <h3 className="text-small-heading mb-4">Insurance made simple</h3>
-              <p className="text-brand-sage mb-6">We accept most major plans, guide families through paperwork, and can provide financial assistance for out-of-pocket expenses.</p>
-              <button onClick={() => navigate('/insurance-financial-assistance')} className="text-brand-teal font-bold flex items-center gap-2 hover:underline">Paying for ABA therapy <ArrowRight size={18} /></button>
+              <h3 className="text-small-heading font-kids font-bold mb-4">Insurance made simple</h3>
+              <p className="text-brand-sage mb-6 text-body-normal-normal-sm">We accept most major plans, guide families through paperwork, and can provide financial assistance for out-of-pocket expenses.</p>
+              <button onClick={() => navigate('/insurance-financial-assistance')} className="text-brand-teal font-bold flex items-center gap-2 hover:underline text-body-normal-normal-sm">Paying for ABA therapy <ArrowRight size={18} /></button>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-8 rounded-[40px] bg-[#FCFAF7] border border-brand-teal/5 lg:col-span-1">
               <div className="w-14 h-14 bg-brand-mint/30 rounded-2xl flex items-center justify-center text-brand-teal mb-6">
                 <Activity size={28} />
               </div>
-              <h3 className="text-small-heading mb-4">Coordinated care</h3>
-              <p className="text-brand-sage">We collaborate with your child's speech, occupational, feeding, and physical therapists to provide sessions directly in our centers. This allows your child to access other services in a familiar environment.</p>
+              <h3 className="text-small-heading font-kids font-bold mb-4">Coordinated care</h3>
+              <p className="text-brand-sage text-body-normal-normal-sm">We collaborate with your child's speech, occupational, feeding, and physical therapists to provide sessions directly in our centers. This allows your child to access other services in a familiar environment.</p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-8 rounded-[40px] bg-[#FCFAF7] border border-brand-teal/5 lg:col-span-1">
               <div className="w-14 h-14 bg-brand-peach/30 rounded-2xl flex items-center justify-center text-brand-teal mb-6">
                 <Users size={28} />
               </div>
-              <h3 className="text-small-heading mb-4">Family Guidance</h3>
-              <p className="text-brand-sage">Parents and caregivers play an important role. Every care plan includes twice-a-month sessions led by a BCBA, giving parents practical strategies for daily routines at home.</p>
+              <h3 className="text-small-heading font-kids font-bold mb-4">Family Guidance</h3>
+              <p className="text-brand-sage text-body-normal-normal-sm">Parents and caregivers play an important role. Every care plan includes twice-a-month sessions led by a BCBA, giving parents practical strategies for daily routines at home.</p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="p-8 rounded-[40px] bg-[#FCFAF7] border border-brand-teal/5 lg:col-span-1">
               <div className="w-14 h-14 bg-brand-mint/30 rounded-2xl flex items-center justify-center text-brand-teal mb-6">
                 <ChevronRight size={28} />
               </div>
-              <h3 className="text-small-heading mb-4">Immediate care</h3>
-              <p className="text-brand-sage">Experience the difference of evidence-based therapy in our Sensory Sanctuary locations.</p>
+              <h3 className="text-small-heading font-kids font-bold mb-4">Compassionate Support</h3>
+              <p className="text-brand-sage text-body-normal-normal-sm">Personalized ABA therapy designed to support meaningful progress for every child and family.</p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Evidence-based ABA Section */}
-      <section className="py-32 bg-[#FCFAF7]">
+      <section className="py-24 bg-[#FCFAF7]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div
@@ -510,10 +559,10 @@ export const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl font-kids font-bold text-brand-ink mb-8 leading-tight">
+              <h2 className="text-section font-kids font-bold text-brand-ink mb-8">
                 Evidence-based <span className="text-brand-teal">ABA therapy</span> <br /> that works for your family
               </h2>
-              <div className="space-y-6 text-xl text-brand-sage leading-relaxed">
+              <div className="space-y-6 text-body-normal-normal-main text-brand-sage">
                 <p>
                   ABA therapy uses behavioral principles and positive reinforcement to help children diagnosed with autism develop new skills and make positive changes in their lives.
                 </p>
@@ -521,7 +570,7 @@ export const Home = () => {
                   Children work closely with a dedicated team of Board Certified Behavior Analysts® (BCBAs®) and Registered Behavior Technicians® (RBTs®). Treatment is highly personalized and delivered through one-on-one, compassionate care.
                 </p>
               </div>
-              <Link to="/what-is-aba" className="mt-10 group flex items-center gap-3 text-brand-teal font-kids font-bold text-2xl">
+              <Link to="/what-is-aba" className="mt-10 group flex items-center gap-3 text-brand-teal font-kids font-bold text-h3">
                 Learn more about ABA at Auvia
                 <span className="w-12 h-12 rounded-full border-2 border-brand-teal flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-all">
                   <ArrowRight />
@@ -535,11 +584,11 @@ export const Home = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="rounded-[60px] overflow-hidden border-[16px] border-white shadow-2xl">
-                <img src="/images/kids-Therapy.jpg" alt="ABA therapy session with a child and therapist" className="w-full object-cover aspect-square" />
+              <div className="rounded-[60px] overflow-hidden border-[8px] border-white shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80" alt="ABA therapy session with a child and therapist" className="w-full object-cover aspect-square" />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-brand-peach p-8 rounded-[40px] text-white shadow-xl max-w-xs rotate-3">
-                <p className="font-kids font-bold text-lg italic">"Compassionate care that prioritizes your child's unique journey."</p>
+                <p className="font-kids font-bold text-body-normal-normal-main italic">"Compassionate care that prioritizes your child's unique journey."</p>
               </div>
             </motion.div>
           </div>
@@ -555,8 +604,8 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-24"
           >
-            <h2 className="text-section text-brand-ink mb-6">I think my child has autism. <br /> <span className="text-brand-sage italic">What should I do next?</span></h2>
-            <p className="text-brand-sage text-2xl font-medium">Not sure where to begin? Here are the next steps based on your child's current diagnostic status.</p>
+            <h2 className="text-section font-kids font-bold text-brand-ink mb-6">I think my child has autism. <br /> <span className="text-brand-sage italic">What should I do next?</span></h2>
+            <p className="text-body-normal-normal-main font-medium text-brand-sage">Not sure where to begin? Here are the next steps based on your child's current diagnostic status.</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -567,20 +616,20 @@ export const Home = () => {
               viewport={{ once: true }}
               className="p-12 rounded-[60px] bg-[#FCFAF7] border border-brand-teal/10 flex flex-col h-full"
             >
-              <div className="inline-flex items-center gap-3 text-brand-teal font-bold mb-8 text-lg">
+              <div className="inline-flex items-center gap-3 text-brand-teal font-bold mb-8 text-small-heading">
                 <Search size={24} /> My child does not have an autism diagnosis.
               </div>
 
               <div className="flex-1 space-y-10">
                 <div>
-                  <h4 className="font-bold text-brand-ink mb-4 flex items-center gap-2"><Stethoscope className="text-brand-peach" /> Access Diagnostic Resources</h4>
-                  <p className="text-brand-sage text-xl leading-relaxed">
+                  <h4 className="font-bold text-brand-ink mb-4 flex items-center gap-2 text-small-heading"><Stethoscope className="text-brand-peach" /> Access Diagnostic Resources</h4>
+                  <p className="text-brand-sage text-body-normal-normal-main">
                     We will help to connect you to resources to get your child evaluated and get a diagnosis report. Obtaining a clinical diagnosis is the first step toward accessing essential ABA therapy services.
                   </p>
                 </div>
                 
                 <div className="p-8 bg-brand-peach/5 rounded-3xl border-2 border-dashed border-brand-peach/20">
-                  <p className="text-brand-sage font-medium italic">
+                  <p className="text-brand-sage font-medium italic text-body-normal-normal">
                     ADOS-2 clinical assessments are the gold standard for autism diagnosis and are typically required by insurance providers.
                   </p>
                 </div>
@@ -588,7 +637,7 @@ export const Home = () => {
 
               <button
                 onClick={() => navigate('/services')}
-                className="w-full py-5 bg-white border-2 border-brand-teal text-brand-teal rounded-3xl font-kids font-bold text-xl hover:bg-brand-teal hover:text-white transition-all"
+                className="w-full py-5 bg-white border-2 border-brand-teal text-brand-teal rounded-3xl font-kids font-bold text-small-heading hover:bg-brand-teal hover:text-white transition-all"
               >
                 Explore diagnostic support
               </button>
@@ -601,24 +650,24 @@ export const Home = () => {
               viewport={{ once: true }}
               className="p-12 rounded-[60px] bg-brand-teal text-white flex flex-col h-full shadow-2xl"
             >
-              <div className="inline-flex items-center gap-3 font-bold mb-8 text-lg">
+              <div className="inline-flex items-center gap-3 font-bold mb-8 text-small-heading">
                 <Heart size={24} fill="white" /> My child has an autism diagnosis.
               </div>
 
               <div className="flex-1 space-y-8">
-                <p className="text-white/90 text-xl leading-relaxed">
-                  To get started, fill out our online interest form. A teammate from a nearby center will contact you to learn more about your family and confirm your insurance coverage. We will then schedule your center tour.
+                <p className="text-white/90 text-body-normal-normal-main">
+                  To Connect With Us, fill out our online interest form. A teammate from a nearby center will contact you to learn more about your family and confirm your insurance coverage. We will then schedule your center tour.
                 </p>
-                <p className="p-6 bg-white/10 rounded-3xl border border-white/20 font-medium italic">
-                  Early intervention makes all the difference. Auvia offers immediate access to care so your child can begin reaching milestone moments right away.
+                <p className="p-6 bg-white/10 rounded-3xl border border-white/20 font-medium italic text-body-normal-normal">
+                  Early intervention makes all the difference. Auvia offers immediate access to care so your child can begin reaching grow with confidence moments right away.
                 </p>
               </div>
 
               <button
                 onClick={() => navigate('/contact')}
-                className="w-full py-6 bg-white text-brand-teal rounded-3xl font-kids font-bold text-2xl hover:bg-brand-peach hover:text-white hover:scale-[1.02] active:scale-95 transition-all shadow-lg mt-10"
+                className="w-full py-6 bg-white text-brand-teal rounded-3xl font-kids font-bold text-small-heading hover:bg-brand-peach hover:text-white hover:scale-[1.02] active:scale-95 transition-all shadow-lg mt-10"
               >
-                Get started
+                Connect With Us
               </button>
             </motion.div>
           </div>
@@ -626,10 +675,7 @@ export const Home = () => {
       </section>
 
       {/* Interest Form Section */}
-      <section
-        id="interest-form"
-        className="py-16 md:py-32 bg-brand-lavender/30"
-      >
+      <section className="py-16 md:py-32 bg-brand-lavender/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -642,14 +688,14 @@ export const Home = () => {
               <div className="inline-block p-4 bg-white rounded-full mb-6 md:mb-8 shadow-sm">
                 <Sparkles className="text-brand-peach animate-pulse" size={32} />
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-kids font-bold text-brand-ink mb-6 tracking-tight">
+              <h2 className="text-section font-kids font-bold text-brand-ink mb-6 tracking-tight">
                 Help your child thrive <br /> with ABA therapy.
               </h2>
-              <p className="text-lg md:text-2xl text-brand-sage mb-6 md:mb-8 font-medium">
+              <p className="text-body-normal-normal-main text-brand-sage mb-6 md:mb-8 font-medium">
                 Complete our online interest form to get matched with a center. We will be in touch soon!
               </p>
 
-              <div className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 text-brand-teal font-bold">
+              <div className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 text-brand-teal font-bold text-body-normal-normal">
                 <div className="flex items-center gap-2">
                   <ShieldCheck size={20} /> HIPAA Compliant
                 </div>
@@ -676,8 +722,8 @@ export const Home = () => {
                     <div className="w-20 h-20 bg-brand-mint text-brand-teal rounded-full flex items-center justify-center mx-auto mb-8">
                       <CheckCircle2 size={48} />
                     </div>
-                    <h3 className="text-3xl font-kids font-bold text-brand-ink mb-4">Thank You!</h3>
-                    <p className="text-brand-sage font-medium mb-8">A team member from your nearest center will contact you within 24 hours.</p>
+                    <h3 className="text-section font-kids font-bold text-brand-ink mb-4">Thank You!</h3>
+                    <p className="text-brand-sage font-medium text-body-normal-normal mb-8">A team member from your nearest center will contact you within 24 hours.</p>
                     <button
                       onClick={() => setFormSubmitted(false)}
                       className="btn-friendly-outline"
@@ -689,41 +735,41 @@ export const Home = () => {
                   <motion.form key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4 md:space-y-5" onSubmit={handleInterestFormSubmit}>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Parent/Guardian First Name<span className="text-red-500">*</span></label>
-                        <input type="text" name="firstName" value={interestForm.firstName} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all" />
+                        <label className="text-label-custom text-brand-ink ml-1">Parent/Guardian First Name<span className="text-red-500">*</span></label>
+                        <input type="text" name="firstName" value={interestForm.firstName} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all text-body-normal-normal" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Parent/Guardian Last Name<span className="text-red-500">*</span></label>
-                        <input type="text" name="lastName" value={interestForm.lastName} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Email<span className="text-red-500">*</span></label>
-                        <input type="email" name="email" value={interestForm.email} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all" />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Phone number<span className="text-red-500">*</span></label>
-                        <input type="tel" name="phone" value={interestForm.phone} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all" />
+                        <label className="text-label-custom text-brand-ink ml-1">Parent/Guardian Last Name<span className="text-red-500">*</span></label>
+                        <input type="text" name="lastName" value={interestForm.lastName} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all text-body-normal-normal" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Child's Date of Birth</label>
-                        <input type="date" name="childDob" value={interestForm.childDob} onChange={handleInterestChange} className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all" />
+                        <label className="text-label-custom text-brand-ink ml-1">Email<span className="text-red-500">*</span></label>
+                        <input type="email" name="email" value={interestForm.email} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all text-body-normal-normal" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Child's First Name</label>
-                        <input type="text" name="childName" value={interestForm.childName} onChange={handleInterestChange} className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all" />
+                        <label className="text-label-custom text-brand-ink ml-1">Phone number<span className="text-red-500">*</span></label>
+                        <input type="tel" name="phone" value={interestForm.phone} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all text-body-normal-normal" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Current Insurance Provider<span className="text-red-500">*</span></label>
-                        <select name="insuranceProvider" value={interestForm.insuranceProvider} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all appearance-none cursor-pointer">
+                        <label className="text-label-custom text-brand-ink ml-1">Child's Date of Birth</label>
+                        <input type="date" name="childDob" value={interestForm.childDob} onChange={handleInterestChange} className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all text-body-normal-normal" />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-label-custom text-brand-ink ml-1">Child's First Name</label>
+                        <input type="text" name="childName" value={interestForm.childName} onChange={handleInterestChange} className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all text-body-normal-normal" />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <label className="text-label-custom text-brand-ink ml-1">Current Insurance Provider<span className="text-red-500">*</span></label>
+                        <select name="insuranceProvider" value={interestForm.insuranceProvider} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all appearance-none cursor-pointer text-body-normal-normal">
                           <option value="">Please Select</option>
                           <option value="BCBS TX">BCBS TX</option>
                           <option value="AETNA COMMERCIAL">AETNA COMMERCIAL</option>
@@ -738,14 +784,14 @@ export const Home = () => {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-brand-ink ml-1">Zip code<span className="text-red-500">*</span></label>
-                        <input type="text" name="zip" value={interestForm.zip} onChange={handleInterestChange} required placeholder="ex: 73301" className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all" />
+                        <label className="text-label-custom text-brand-ink ml-1">Zip code<span className="text-red-500">*</span></label>
+                        <input type="text" name="zip" value={interestForm.zip} onChange={handleInterestChange} required placeholder="ex: 73301" className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all text-body-normal-normal" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-brand-ink ml-1">Find nearby Centers<span className="text-red-500">*</span></label>
-                      <select name="center" value={interestForm.center} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all appearance-none cursor-pointer">
+                      <label className="text-label-custom text-brand-ink ml-1">Find nearby Centers<span className="text-red-500">*</span></label>
+                      <select name="center" value={interestForm.center} onChange={handleInterestChange} required className="w-full p-4 bg-[#FCFAF7] border border-gray-200 rounded-2xl outline-none focus:border-brand-teal transition-all appearance-none cursor-pointer text-body-normal-normal">
                           <option value="">Please Select</option>
                           <option value="allen">Allen, TX</option>
                           <option value="austin">Austin, TX</option>
@@ -764,7 +810,7 @@ export const Home = () => {
                         onChange={handleInterestChange} 
                         className="mt-1.5 accent-brand-teal h-5 w-5 shrink-0 cursor-pointer" 
                       />
-                      <label htmlFor="consent" className="text-[10px] sm:text-[11px] text-brand-sage leading-relaxed cursor-pointer">
+                      <label htmlFor="consent" className="text-small text-brand-sage leading-relaxed cursor-pointer">
                         By checking the box, and submitting this form, you consent to receive text messages (SMS) regarding, but not limited to answer your questions, provide follow-up, and general communication from Auvia Behavior Centers. Message frequency may vary. Message and data rates may apply. You can reply STOP to opt out of further messaging, reply HELP for assistance, or call 888-352-0091. Please see our Privacy Policy <Link to="/privacy" className="text-brand-teal underline">here</Link>.
                       </label>
                     </div>
@@ -772,7 +818,7 @@ export const Home = () => {
                     <button 
                       type="submit" 
                       disabled={formSubmitting}
-                      className={`w-full py-5 bg-brand-teal text-white rounded-2xl font-kids font-bold text-xl hover:bg-[#3d7a6f] transition-all transform active:scale-95 shadow-xl ${formSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                      className={`w-full py-5 bg-brand-teal text-white rounded-2xl font-kids font-bold text-small-heading hover:bg-[#3d7a6f] transition-all transform active:scale-95 shadow-xl ${formSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                     >
                       {formSubmitting ? 'Submitting...' : 'Submit Interest Form'}
                     </button>
@@ -785,7 +831,7 @@ export const Home = () => {
       </section>
 
       {/* FAQs */}
-      <section className="py-32 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -794,8 +840,8 @@ export const Home = () => {
             className="flex justify-between items-end mb-16"
           >
             <div>
-              <h2 className="text-5xl font-kids font-bold text-brand-ink mb-4">Frequently asked questions</h2>
-              <Link to="/what-is-aba" className="text-brand-teal font-bold flex items-center gap-2 hover:underline text-lg">
+              <h2 className="text-section font-kids font-bold text-brand-ink mb-4">Frequently asked questions</h2>
+              <Link to="/what-is-aba" className="text-brand-teal font-bold flex items-center gap-2 hover:underline text-body-normal-normal-main">
                 View all FAQs <ArrowRight size={20} />
               </Link>
             </div>
@@ -828,12 +874,12 @@ export const Home = () => {
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12">
               <div className="max-w-xl text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-brand-mint text-xs sm:text-sm font-bold uppercase tracking-widest mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-brand-mint text-label-custom uppercase tracking-widest mb-6">
                   <MessageCircle size={16} /> Stay connected
                 </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-kids font-bold mb-6">Auvia Parent Newsletter</h2>
-                <p className="text-white/70 text-lg sm:text-xl leading-relaxed">
-                  Join our community of families and receive expert tips, milestone activities, and inspiring stories delivered straight to your inbox.
+                <h2 className="text-section font-kids font-bold mb-6">Auvia Parent Newsletter</h2>
+                <p className="text-body-normal-normal-main text-white/70">
+                  Join our community of families and receive expert tips, grow with confidence activities, and inspiring stories delivered straight to your inbox.
                 </p>
               </div>
 
@@ -848,8 +894,8 @@ export const Home = () => {
                       className="bg-white/10 p-8 rounded-[32px] border border-white/20 text-center min-w-full sm:min-w-[400px] lg:min-w-[450px]"
                     >
                       <CheckCircle2 size={48} className="mx-auto mb-4 text-brand-mint" />
-                      <p className="font-kids font-bold text-xl">You're subscribed!</p>
-                      <p className="text-white/60 text-sm mt-2">Check your inbox for a welcome email.</p>
+                      <p className="font-kids font-bold text-small-heading">You're subscribed!</p>
+                      <p className="text-white/60 text-body-normal-normal mt-2">Check your inbox for a welcome email.</p>
                     </motion.div>
                   ) : (
                     <motion.form 
@@ -865,15 +911,15 @@ export const Home = () => {
                         value={newsletterEmail}
                         onChange={(e) => setNewsletterEmail(e.target.value)}
                         required
-                        className="flex-1 bg-transparent px-6 py-4 outline-none text-lg font-medium placeholder:text-white/30"
+                        className="flex-1 bg-transparent px-6 py-4 outline-none text-body-normal-normal-main font-medium placeholder:text-white/30"
                       />
-                      <button type="submit" className="bg-brand-teal hover:bg-[#3d7a6f] text-white px-8 sm:px-10 py-4 rounded-[24px] font-kids font-bold text-lg sm:text-xl transition-all whitespace-nowrap shadow-lg active:scale-95">
+                      <button type="submit" className="bg-brand-teal hover:bg-[#3d7a6f] text-white px-8 sm:px-10 py-4 rounded-[24px] font-kids font-bold text-small-heading sm:text-h3 transition-all whitespace-nowrap shadow-lg active:scale-95">
                         Join Parent Newsletter
                       </button>
                     </motion.form>
                   )}
                 </AnimatePresence>
-                <p className="text-[10px] sm:text-xs text-white/40 mt-4 text-center lg:text-left px-4">
+                <p className="text-small text-white/40 mt-4 text-center lg:text-left px-4">
                   By subscribing, you agree to our Privacy Policy and consent to receive marketing updates.
                 </p>
               </div>
