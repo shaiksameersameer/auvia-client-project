@@ -201,7 +201,7 @@ export const Home = () => {
           <div className="relative w-full h-full rounded-[60px] lg:rounded-[120px] overflow-hidden border-[8px] lg:border-[16px] border-white shadow-[0_50px_100px_rgba(0,0,0,0.12)]">
             {/* Real professional ABA environment image */}
             <img 
-              src={heroImage}
+              src="/images/kids-hero-Therapy.jpg"
               alt="Auvia Behavior Centers Clinical Sanctuary"
               className="w-full h-full object-cover"
             />
@@ -307,7 +307,7 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-20"
           >
-            <h2 className="text-section mb-6">Reach grow with confidence moments. <span className="text-brand-teal italic font-medium">moments.</span></h2>
+            <h2 className="text-section mb-6">Reach grow with confidence moments. <span className="text-brand-teal italic font-medium"></span></h2>
             <p className="text-brand-sage text-body-normal leading-relaxed"> Expert ABA therapy programs designed specifically for every stage of your child's development.</p>
           </motion.div>
 
