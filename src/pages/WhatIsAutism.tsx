@@ -459,7 +459,7 @@ export const WhatIsAutism = () => {
           <div className="relative">
             <div className="rounded-[80px] overflow-hidden shadow-3xl border-[16px] border-white">
               <img 
-                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1000" 
+                src="/images/kids-diagnosis.jpg"
                 alt="Clinical assessment support" 
                 className="w-full aspect-square object-cover" 
               />
