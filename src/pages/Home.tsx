@@ -264,7 +264,7 @@ export const Home = () => {
           </h1>
 
           <p className="text-body-main text-brand-sage mb-10 lg:mb-16 max-w-xl font-medium leading-relaxed border-l-4 border-brand-teal/10 pl-6 lg:pl-8">
-            Evidence-based ABA therapy within our Sanctuary Network. We prioritize the unique joy of every child while reaching for excellence.
+            Helping children build confidence, communication, and lifelong skills through compassionate, evidence-based ABA therapy.
           </p>
           <button
              onClick={() => {
@@ -272,7 +272,7 @@ export const Home = () => {
                   section?.scrollIntoView({ behavior: "smooth" });
              }}
               className="mt-8 bg-brand-teal text-white px-8 py-4 rounded-[20px] font-kids font-bold text-lg shadow-lg hover:bg-[#3d7a6f] transition-all"
-          > Get Started
+          > Connect With Us
           </button>
         </motion.div>
       </div>
@@ -307,7 +307,7 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-20"
           >
-            <h2 className="text-section mb-6">Reach milestone <span className="text-brand-teal italic font-medium">moments.</span></h2>
+            <h2 className="text-section mb-6">Reach grow with confidence moments. <span className="text-brand-teal italic font-medium">moments.</span></h2>
             <p className="text-brand-sage text-body-normal leading-relaxed"> Expert ABA therapy programs designed specifically for every stage of your child's development.</p>
           </motion.div>
 
@@ -536,7 +536,7 @@ export const Home = () => {
               className="relative"
             >
               <div className="rounded-[60px] overflow-hidden border-[16px] border-white shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80" alt="ABA therapy session with a child and therapist" className="w-full object-cover aspect-square" />
+                <img src="/images/kids-Therapy.jpg" alt="ABA therapy session with a child and therapist" className="w-full object-cover aspect-square" />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-brand-peach p-8 rounded-[40px] text-white shadow-xl max-w-xs rotate-3">
                 <p className="font-kids font-bold text-lg italic">"Compassionate care that prioritizes your child's unique journey."</p>
